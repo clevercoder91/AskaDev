@@ -26,3 +26,6 @@
 ### Got Any Ideas :computer:
 - DM me on Instagram [instagram](https://instagram.com/djangostaan) :left_speech_bubble:
 - [Email me](mailto:devbmehta04@gmail.com)
+
+### Collaboration with Shah Stavan
+- [Blogging Website](https://clickarc.bss.design)
