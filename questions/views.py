@@ -17,6 +17,7 @@ def gitHubPost(text, mode='markdown'):
 		return None
 
 @csrf_exempt
+# Function for liking a answer
 def likeAnswer(request):
 	if request.method == 'POST':
 		post = request.POST.get('answer')
@@ -45,6 +46,7 @@ def likeAnswer(request):
 	else:
 		return redirect('/')
 @csrf_exempt
+# Function for liking a post
 def likePost(request):
 	if request.method == 'POST':
 		js = json.loads(request.body.decode("utf-8"))
@@ -84,6 +86,8 @@ def likePost(request):
 		return HttpResponse(liked)
 	else:
 		return redirect('/')
+
+# Function for Question Detail
 def QuestionDetailView(request, user, question):
 	user = get_object_or_404(User, username=user)
 	question = get_object_or_404(Question,user=user, url=question)
@@ -141,6 +145,7 @@ class AnswerCreateView(CreateView):
 		slug = question.url
 		return redirect(f'/{question.user}/questions/{slug}')
 
+# Creating a class for trending questions based on likes
 class TrendingQuestionView(ListView):
 	model = Question
 
