@@ -11,6 +11,7 @@ class Tags(models.Model):
 
 	class Meta:
 		db_table = 'Tag'
+# Creating a model for questions which will be asked by users and will be answered by other users
 class Question(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 	title = models.CharField(max_length=100)
@@ -21,6 +22,7 @@ class Question(models.Model):
 	answers = models.IntegerField(default=0)
 	likes = models.IntegerField(default=0)
 
+# Creating a model for answers which will be given by users to the questions asked by other users
 class Answer(models.Model):
 	answered_by = models.ForeignKey(User,on_delete=models.CASCADE)
 	question = models.ForeignKey(Question, on_delete=models.CASCADE)
@@ -28,12 +30,14 @@ class Answer(models.Model):
 	url = models.CharField(max_length=32)
 	answered_at = models.DateTimeField(default=timezone.now)
 	likes = models.IntegerField(default=0)
-
+	
+# Creating a model for likes which will be given by users to the answers
 class AnswerLiker(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 	answer = models.ForeignKey(Answer, on_delete=models.CASCADE)
 	liked = models.BooleanField(default=False)
 
+# Creating a model for likes which will be given by users to the questions
 class Liker(models.Model):
 	user = models.ForeignKey(User, on_delete=models.CASCADE)
 	question = models.ForeignKey(Question, on_delete=models.CASCADE)
