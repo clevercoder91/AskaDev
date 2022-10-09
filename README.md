@@ -3,11 +3,11 @@
 
 ### Why AskaDev?
 - Ask your queries and get solutions from other developers.🤝
-- I hope this may benefit you.🙏
+- I hope this may come helpful to you🙏
 - This website is only for programmers.👨‍💻
 
 ### It's Still Under Developement
-- Got a bug? DM me on [instagram](https://instagram.com/djangostaan).:left_speech_bubble:
+- Found a bug? DM me on [instagram](https://instagram.com/djangostaan).:left_speech_bubble:
 
 ### To Do:writing_hand:
 - Add Likes / Dislikes feature on Answers(AJAX and Django Views)
